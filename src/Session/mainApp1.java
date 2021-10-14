@@ -3,7 +3,7 @@ package Session;
 
 import java.util.Scanner; 
 
-public class mainApp {
+public class mainApp1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

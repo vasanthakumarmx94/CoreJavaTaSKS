@@ -70,6 +70,7 @@ public class RegisterAccount {
 
 			users.add(new Users(name, address, contactno, username, password, intdeptamt, initdate));
 			transactions = new ArrayList<String>(5);
+			@SuppressWarnings("unused")
 			UserDashboard ud = new UserDashboard(transactions);
 			UserDashboard.addTransaction(String.format("Initial deposit - " + intdeptamt + " as on " + initdate));
 			System.out.println("User Register sucsessfuly");
@@ -81,7 +82,7 @@ public class RegisterAccount {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return super.toString();
 	}
 

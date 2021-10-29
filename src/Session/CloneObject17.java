@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,15 +33,20 @@ public class CloneObject17 {
 
 			for (Pulsar pulsar : pul)
 				oos.writeObject(pulsar);
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 		try {
+			
 			ois = new ObjectInputStream(new FileInputStream(outputFile));
 			for (Pulsar pulsar : pul)
-				System.out.println("Color : " + pulsar.getColor() + "\tHeight : " + pulsar.getHeight() + "\tWidth : "
-						+ pulsar.getWidth() + "\tSpeed : " + pulsar.getSpeed());
+				System.out.println(pulsar);
+//				System.out.println("Color : " + pulsar.getColor() + "\tHeight : " + pulsar.getHeight() + "\tWidth : "
+//						+ pulsar.getWidth() + "\tSpeed : " + pulsar.getSpeed());
+				ois.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -49,7 +55,8 @@ public class CloneObject17 {
 
 }
 
-class Pulsar implements Cloneable {
+class Pulsar implements Cloneable,Serializable {
+	private static final long serialVersionUID=1L;
 	String color;
 	double height;
 	double width;
@@ -93,6 +100,11 @@ class Pulsar implements Cloneable {
 
 	public void setSpeed(double speed) {
 		this.speed = speed;
+	}
+
+	@Override
+	public String toString() {
+		return "Pulsar [color=" + color + ", height=" + height + ", width=" + width + ", speed=" + speed + "]";
 	}
 
 	@Override

@@ -1,10 +1,7 @@
 package Session;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 
 
@@ -65,10 +62,10 @@ public class TrainerDemo8 {
 		filteredList.clear();
 	}
 
-	private static String type(Object ob) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	private static String type(Object ob) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 }
 class Trainer{
@@ -84,7 +81,8 @@ class Trainer{
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
+		
 		return "Tr_id: "+tr_id+", Name: "+name+", Course: "+course+", Salary: "+salary;
 	}
 }

@@ -39,14 +39,15 @@ public class DouLinkedListTest9 {
 	    // starting from the given node 
 	    public void printlist(Node node) 
 	    { 
-	        Node last = null; 
+	        @SuppressWarnings("unused")
+			Node last = null; 
 	  
 	        while (node != null) { 
 	            System.out.print(node.data + " "); 
 	            last = node; 
 	            node = node.next; 
 	        } 
-	  
+	 
 	        System.out.println(); 
 	    } 
 	  

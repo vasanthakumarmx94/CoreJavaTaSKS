@@ -26,18 +26,16 @@ public class DisplyLineworlds14 {
 				bufferedOutputStream.write(new String(buffer, 0, bytesRead).getBytes());
 			}
 
-			// bufferedOutputStream.write(" using BufferedOutputStream".getBytes());
 			bufferedOutputStream.flush();
 
 			File filec = new File("Resource/outfile.txt");
 			FileInputStream fileInputStream1 = new FileInputStream(filec);
 			InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream1);
+			@SuppressWarnings("resource")
 			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
 			String line;
 			int wordCount = 0;
 			int counter = 0;
-
 			while ((line = bufferedReader.readLine()) != null) {
 
 				String words[] = line.split("\\s+");

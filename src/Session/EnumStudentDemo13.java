@@ -37,6 +37,7 @@ public class EnumStudentDemo13 {
 				System.out.println("sid:"+std.stid+", sname:" + std.stname + ", subject :" + std.s+", Marks:"+std.marks );
 			}
 		}
+		sc.close();
 
 	}
 

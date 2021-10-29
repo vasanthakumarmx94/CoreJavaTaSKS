@@ -4,6 +4,7 @@ import java.util.*;
 
 public class EnterBOption {
 
+	Scanner sc = new Scanner(System.in);
 	int selectOption() {
 
 		System.out.println("-----------------------");
@@ -14,7 +15,7 @@ public class EnterBOption {
 		System.out.println("3.Update account");
 		System.out.println("4.Exit");
 
-		Scanner sc = new Scanner(System.in);
+		//Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Your Choice:");
 		int opt = sc.nextInt();
 		if (opt <= 0 || opt > 5) {
@@ -38,7 +39,7 @@ public class EnterBOption {
 		System.out.println("4.Last 5 transactions.");
 		System.out.println("5. User information.");
 		System.out.println("6.Logout ");
-		Scanner sc = new Scanner(System.in);
+		//Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Your Choice:");
 		int uopt = sc.nextInt();
 		System.out.println();

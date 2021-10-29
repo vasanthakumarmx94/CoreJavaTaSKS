@@ -42,6 +42,7 @@ public class Student19 {
 					break;
 				}
 			}
+			sc.close();
 
 			try {
 

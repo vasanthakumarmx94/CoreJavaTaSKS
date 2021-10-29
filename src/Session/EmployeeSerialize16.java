@@ -48,6 +48,8 @@ public class EmployeeSerialize16 {
 			System.out.println("The Employee with maximum salary");
 			System.out.println("   Emp ID : " + max.getEmpid() + "    Emp Name : " + max.getEname()
 					+ "      Emp salary : " + max.getEsal() + "\tDNO : " + max.getDno());
+			
+			ois.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

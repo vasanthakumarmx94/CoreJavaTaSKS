@@ -11,8 +11,8 @@ public class Login {
 	Scanner sc = new Scanner(System.in);
 
 	public Login(List<Users> users2) {
-		this.users = users2;
-		System.out.println();
+		// TODO Auto-generated constructor stub
+		this.users=users2;
 	}
 
 	void loginAcc() {
@@ -39,12 +39,6 @@ public class Login {
 			loginAcc();
 		}
 
-	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
 	}
 
 }

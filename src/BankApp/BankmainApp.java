@@ -14,7 +14,7 @@ public class BankmainApp {
 		selectOpt();
 	}
 
-	static void selectOpt() {
+	public static void selectOpt() {
 		EnterBOption Eo = new EnterBOption();
 		int option = Eo.selectOption();
 		switch (option) {
@@ -28,7 +28,7 @@ public class BankmainApp {
 			 lg.loginAcc();
 			break;
 		case 3:
-			UpdateAccout ua=new UpdateAccout(users);
+			@SuppressWarnings("unused") UpdateAccout ua=new UpdateAccout(users);
 		
 			break;
 		case 4:

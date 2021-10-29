@@ -17,6 +17,7 @@ public class mainApp1 {
 		//int a[]= {20,10,50,30,40};
 		//int n=a.length;
 		//pol.swapmax(a,n)
+		sc.close();
 
 	}
 

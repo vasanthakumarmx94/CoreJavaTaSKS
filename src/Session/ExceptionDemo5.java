@@ -1,7 +1,7 @@
 package Session;
 
 class Account {
-	private static int acc_balance = 0;
+	private  int acc_balance = 0;
 
 	public Account(int acc_balance) {
 		super();
@@ -27,6 +27,7 @@ class Account {
 	}
 }
 
+@SuppressWarnings("serial")
 class WithdrawException extends Exception {
 
 	String msg;

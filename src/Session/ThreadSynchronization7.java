@@ -22,7 +22,7 @@ class MyThread extends Thread{
 class SharedResource {
 	synchronized void doprint(int m,int n) {
 		System.out.println(n+" digits are added in sequence after "+m);
-		int count=0;
+		//int count=0;
 		for(int i=0;i<=n;i++) {
 			System.out.print(m+" ");
 			try {

@@ -35,6 +35,7 @@ public class StudentMainApp2 {
 				System.out.println("StdId:"+std[i].stid+" ,  StdName:"+std[i].name+", Stdcource:"+std[i].course+" , stdmarks:"+std[i].marks);
 			}
 		}
+		sc.close();
 	}
 
 }

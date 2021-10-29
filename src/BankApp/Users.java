@@ -1,8 +1,5 @@
 package BankApp;
 
-import java.text.NumberFormat;
-import java.util.*;
-
 public class Users {
 	String name;
 	String address;

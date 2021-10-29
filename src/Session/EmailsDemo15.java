@@ -7,12 +7,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.regex.Pattern;
 
 public class EmailsDemo15 {
 
 	public static void main(String[] args) throws IOException {
 
+		
 		String email[] = new String[5];
 		String em;
 		System.out.println("Enter 5 valid emailids:");
@@ -29,7 +29,6 @@ public class EmailsDemo15 {
 		File file1 = new File("resource/emails.txt");
 		BufferedWriter br1 = new BufferedWriter(new FileWriter(file1, true));
 		for (int i = 0; i < 5; i++) {
-
 			br1.write(email[i]);
 			br1.newLine();
 		}
@@ -43,6 +42,7 @@ public class EmailsDemo15 {
 		BufferedReader br2 = new BufferedReader(new FileReader(file1));
 		int i = 0;
 		while ((line[i] = br2.readLine()) != null) {
+			
 			dm[i] = line[i].substring(line[i].indexOf("@") + 1);
 			if (dm[i].isEmpty() || line[i].indexOf("@") <= 0) {
 
@@ -56,7 +56,6 @@ public class EmailsDemo15 {
 		br2.close();
 		br3.close();
 	}
-
 	private static boolean isvalid(String email) {
 
 		if (email.matches("\\w{2,10}[@]\\w{2,10}[.]\\w{3}"))

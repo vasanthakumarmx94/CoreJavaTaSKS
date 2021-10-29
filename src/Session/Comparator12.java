@@ -12,24 +12,24 @@ public class Comparator12 {
 
 	public static void main(String[] args) {
 		List<Movies> movie = new ArrayList<Movies>();
-		movie.add(new Movies(4, "Huchcha", 2000));
-		movie.add(new Movies(5, "Nandi", 2005));
-		movie.add(new Movies(2, "shh", 1999));
+		movie.add(new Movies(4, "Modala Sala", 2010));
+		movie.add(new Movies(5, "Mungaru male", 2004));
+		movie.add(new Movies(2, "Myna", 2010));
 		movie.add(new Movies(3, "Kotigobba", 2012));
-		Scanner in = new Scanner(System.in);
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
 		Comparator12 cm = new Comparator12();
 
 		while (true) {
 			System.out.println(
 					"\n 1.Sort by Ratings \n 2.Sort by name \n 3.Sort by year \n 4.Sort by ratings in Reverse \n 5.Sort By name in Reverse\n 6.Sort by year in Reverse \n 7.Exit");
 			System.out.println("Enter Your Choice");
-			int ch = in.nextInt();
+			int ch = sc.nextInt();
 			switch (ch) {
 			case 1:
 				Collections.sort(movie, new SortByRating());
 				System.out.println("Sorted by Ratings");
 				cm.show(movie);
-
 				break;
 			case 2:
 				Collections.sort(movie, new SortByName());
@@ -61,6 +61,7 @@ public class Comparator12 {
 			}
 
 		}
+		
 
 	}
 
@@ -89,7 +90,7 @@ class SortByRating implements Comparator<Movies> {
 
 	@Override
 	public int compare(Movies o1, Movies o2) {
-		// TODO Auto-generated method stub
+		
 		return o1.ratings - o2.ratings;
 	}
 
@@ -99,7 +100,7 @@ class SortByName implements Comparator<Movies> {
 
 	@Override
 	public int compare(Movies o1, Movies o2) {
-		// TODO Auto-generated method stub
+		
 		return o1.name.compareTo(o2.name);
 	}
 
@@ -109,7 +110,7 @@ class SortByYear implements Comparator<Movies> {
 
 	@Override
 	public int compare(Movies o1, Movies o2) {
-		// TODO Auto-generated method stub
+		
 		return o1.year - o2.year;
 	}
 
@@ -119,7 +120,7 @@ class SortByRating1 implements Comparator<Movies> {
 
 	@Override
 	public int compare(Movies o1, Movies o2) {
-		// TODO Auto-generated method stub
+		
 		return o2.ratings - o1.ratings;
 	}
 
@@ -129,7 +130,7 @@ class SortByName1 implements Comparator<Movies> {
 
 	@Override
 	public int compare(Movies o1, Movies o2) {
-		// TODO Auto-generated method stub
+		
 		return o2.name.compareTo(o1.name);
 	}
 
@@ -139,7 +140,7 @@ class SortByYear1 implements Comparator<Movies> {
 
 	@Override
 	public int compare(Movies o1, Movies o2) {
-		// TODO Auto-generated method stub
+		
 		return o2.year - o1.year;
 	}
 }

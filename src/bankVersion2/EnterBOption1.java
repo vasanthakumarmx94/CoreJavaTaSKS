@@ -37,7 +37,7 @@ public class EnterBOption1 {
 		System.out.println("2.View Balance");
 		System.out.println("3.Transfer");
 		System.out.println("4.Last 5 transactions.");
-		System.out.println("5. User information.");
+		System.out.println("5.User information.");
 		System.out.println("6.Logout ");
 		//Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Your Choice:");

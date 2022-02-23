@@ -50,8 +50,7 @@ public class RegisterAccount1 {
 			password = sc.next();
 			if (password.length() >= 8) {
 				if (password.matches("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_])).{8,20}")) {
-					// one Uppercase,one digit, one sepecial characters must and minimum 8
-					// characters legnth
+					// one Uppercase,one digit, one sepecial characters must and minimum 8 characters legnth
 					break;
 
 				} else {
@@ -66,11 +65,6 @@ public class RegisterAccount1 {
 		intdeptamt = sc.nextDouble();
 
 
-		LocalDateTime date = LocalDateTime.now(); // java 8 feature LocalDateTime
-		DateTimeFormatter dateformat = DateTimeFormatter.ofPattern("yyyy-mm-dd hh:mm:ss");
-		initdate = date.format(dateformat);
-
-		
 		 ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("BankDB/usersdb.db")); // serialization concept
 		// System.out.println(date);
 		try {
@@ -85,6 +79,10 @@ public class RegisterAccount1 {
 			// System.out.println("serialization done");
 
 			transactions1 = new ArrayList<String>(5);
+			
+			LocalDateTime date = LocalDateTime.now(); // java 8 feature LocalDateTime
+			DateTimeFormatter dateformat = DateTimeFormatter.ofPattern("yyyy-mm-dd hh:mm:ss");
+			initdate = date.format(dateformat);
 
 			UserDashboard1 ud = new UserDashboard1(transactions1);
 			ud.addTransaction(String.format("Initial deposit - " + intdeptamt + " as on " + initdate));

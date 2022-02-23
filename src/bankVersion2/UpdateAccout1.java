@@ -45,13 +45,13 @@ public class UpdateAccout1 {
 			String decypassword = new String(decoder.decode(user.getPassword()));
 
 			if (user.username.equals(uname) && decypassword.equals(pswrd)) {
-				System.out.println("Enter the Updated name : ");
+				System.out.print("Enter the Updated name : ");
 				String name = sc.next();
-				System.out.println("Enter the Updated Address:");
+				System.out.print("Enter the Updated Address:");
 				String Address = sc.next();
-				System.out.println("Enter the Updated PhoneNo:");
+				System.out.print("Enter the Updated PhoneNo:");
 				String contactno = sc.next();
-				System.out.println("Enter the Updated password:");
+				System.out.print("Enter the Updated password:");
 				String password = sc.next();
 
 				user.name = name;
@@ -60,6 +60,7 @@ public class UpdateAccout1 {
 				Base64.Encoder encoder = Base64.getEncoder(); // java 8 feature Base64 ecryption and decryption
 				String encyPassword = encoder.encodeToString(password.getBytes());
 				user.password = encyPassword;
+				System.out.println("Updated Successfully...");
 
 			}
 
@@ -68,6 +69,7 @@ public class UpdateAccout1 {
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("BankDB/usersdb.db"));
 		for (Users1 u : userlist)
 			oos.writeObject(u);
+		
 		oos.close();
 		ois.close();
 	}

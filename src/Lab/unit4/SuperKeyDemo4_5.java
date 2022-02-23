@@ -40,7 +40,9 @@ public class SuperKeyDemo4_5 {
 	public static void main(String[] args) {
 		Multiply mobj=new Multiply(2,3,4);
 		mobj.Display();
-
+		
+		Addition addobj=new Multiply(2,4,6);
+		addobj.Display();
 	}
 
 }

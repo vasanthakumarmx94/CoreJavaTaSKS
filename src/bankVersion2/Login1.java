@@ -39,6 +39,9 @@ public class Login1 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		for(Users1 ule:userlist) {
+			System.out.println(ule);
+		}
 		
 		ois.close();
 		Base64.Decoder decoder = Base64.getDecoder();// java 8 feature Base64 ecryption and decryption

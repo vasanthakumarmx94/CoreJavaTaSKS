@@ -26,8 +26,8 @@ public class BankmainApp1 {
 			 selectOpt();
 			break;
 		case 3:
-			@SuppressWarnings("unused") 
 			UpdateAccout1 ua=new UpdateAccout1();
+			ua.updateuser();
 			 selectOpt();
 			break;
 		case 4:
